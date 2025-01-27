@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div class="container mt-5">
-    <h1>Bem-vindo ao Dashboard!</h1>
-    <div class="alert alert-success" role="alert">
-        Você está na página principal da aplicação.
+<x-app-layout>
+    <div class="p-20">
+        <h1>dashboard.blade.php</h1>
     </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</x-app-layout>
+{{--<x-app-layout>--}}
+{{--    <div class="container mx-auto mt-8 ml-10">--}}
+{{--        <h1 class="text-3xl font-bold text-gray-700">Bem-vindo ao Dashboard</h1>--}}
+{{--        <p class="text-gray-600 mt-4">Gerencie suas tarefas e informações aqui.</p>--}}
+{{--    </div>--}}
+{{--    <button type="button" class="btn btn-danger">Base class</button>--}}
+{{--</x-app-layout>--}}
