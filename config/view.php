@@ -33,4 +33,6 @@ return [
         realpath(storage_path('framework/views'))
     ),
 
+    //Estilo input global
+    'input_classes' => 'rounded-4 form-control mt-1',
 ];
