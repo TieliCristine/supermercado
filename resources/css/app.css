@@ -1,1 +1,13 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #212529;
+    --bs-body-color: #f8f9fa;
+    --bs-primary: #1d9bf0;
+    --bs-secondary: #495057;
+}

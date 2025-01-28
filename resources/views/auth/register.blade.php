@@ -1,22 +1,19 @@
 <x-guest-layout>
     <x-auth-card>
 
-        <div class="card p-3">
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors"/>
+        <div class="card p-3 position-absolute top-50 start-50 translate-middle">
+            <!-- Validation Errors -->
+            <x-auth-validation-errors class="mb-4" :errors="$errors"/>
             <form method="POST" action="{{ route('register') }}">
-                @csrf
-
                 <!-- Name -->
-                <div>
-                    <x-label for="name" :value="__('Name')"/>
-
+                <div class="form-floating mb-3">
                     <x-input id="name"
                              type="text"
                              name="name"
                              :value="old('name')"
                              required
                              autofocus/>
+                    <x-label for="name" :value="__('Name')"/>
                 </div>
 
                 <!-- Email Address -->
