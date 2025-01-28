@@ -33,6 +33,8 @@ return [
         realpath(storage_path('framework/views'))
     ),
 
-    //Estilo input global
+    /* ------------------------------------------- ** Estilos Globais** ------------------------------------------- */
+
     'input_classes' => 'rounded-4 form-control mt-1',
+    'auth-card_classes' => 'border border-primary card p-3 position-absolute top-50 start-50 translate-middle min-w-80',
 ];

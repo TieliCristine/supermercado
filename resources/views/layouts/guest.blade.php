@@ -13,14 +13,10 @@
 
 </head>
 <body class="border border-danger bg-secondary vh-100 vw-100 bg-body text-body">
-<header>
-    <h1>guest.blade.php</h1>
-</header>
-<main class="border border-warning">
+<main>
     {{ $slot }}
 </main>
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/theme.js') }}"></script>
-
 </body>
 </html>
