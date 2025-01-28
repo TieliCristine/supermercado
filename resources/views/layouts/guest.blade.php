@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
 </head>
-<body class="border border-danger bg-secondary vh-100 vw-100 bg-body text-body">
+<body class="border border-danger vh-100 vw-100 bg-auth text-body">
 <main>
+    <button id="toggle-theme" class="btn btn-outline-primary">
+        <i id="theme-icon" class="bi bi-sun"></i>
+    </button>
     {{ $slot }}
 </main>
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/theme.js') }}"></script>
+
 </body>
 </html>

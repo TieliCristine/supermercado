@@ -22,7 +22,17 @@
 <div class="m-5">
     {{--                @include('layouts.navigation')--}}
     <h3>app.blade fora do main</h3>
+
+{{--    <div class="d-flex justify-content-center">--}}
+{{--        <div class="spinner-border text-primary" role="status">--}}
+{{--            <span class="visually-hidden">Loading...</span>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+
     <main class="border border-warning">
+
+
+
         {{ $slot }}
     </main>
 </div>
@@ -31,8 +41,8 @@
     <p>&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. Todos os direitos reservados.</p>
 </footer>
 
-
 <script src="{{ mix('js/app.js') }}"></script>
 <script src="{{ asset('js/theme.js') }}"></script>
+
 </body>
 </html>
