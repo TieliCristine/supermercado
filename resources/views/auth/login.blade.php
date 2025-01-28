@@ -1,15 +1,16 @@
 <x-guest-layout>
-    <x-auth-card class="bg-light shadow-lg">
-        {{--        <button id="toggle-theme" class="btn btn-outline-primary">--}}
-        {{--            <i id="theme-icon" class="bi bi-sun"></i>--}}
-        {{--        </button>--}}
-        <div class="card-header  border-primary-subtle">
-            <h2 class="card-title d-flex justify-content-center text-primary-emphasis">Acessar</h2>
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <x-alert type="danger" :message="$error"/>
+        @endforeach
+    @endif
+    @if (session('status'))
+        <x-alert type="success" :message="session('status')"/>
+    @endif
+    <x-auth-card class="shadow-lg">
+        <div class="card-header border-primary-subtle">
+            <h2 class="card-title d-flex justify-content-center text-primary">Acessar</h2>
         </div>
-        <!-- Session Status -->
-        <x-auth-session-status :status="session('status')"/>
-        <!-- Validation Errors -->
-        <x-auth-validation-errors :errors="$errors"/>
         <form class="mt-4"
               method="POST"
               action="{{ route('login') }}">
@@ -20,16 +21,16 @@
                          name="email"
                          :value="old('email')"
                          required
-                         autocomplete="username"
-                         autofocus/>
+                         autofocus
+                />
                 <x-label for="email" :value="__('Email')"/>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mt-4">
                 <x-input id="password"
                          type="password"
                          name="password"
                          required
-                         autocomplete="current-password"/>
+                         autocomplete="new-password"/>
                 <x-label for="password" :value="__('Senha')"/>
             </div>
             <div class="mt-4">
@@ -47,7 +48,7 @@
                         {{ __('Entrar') }}
                     </x-button>
                     @if (Route::has('password.request'))
-                        <a class="text-secondary" href="{{ route('password.request') }}">
+                        <a href="{{ route('password.request') }}">
                             {{ __('Esqueceu a senha?') }}
                         </a>
                     @endif
