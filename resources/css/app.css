@@ -1,5 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+/* na classe root declaro as variáveis CSS */
 :root {
     /*--bs-body-bg: #ffffff;*/
     /*--bs-body-color: #00091e;*/
@@ -7,11 +8,7 @@
     /*--bs-primary: #0d6efd;*/
     /*--bs-secondary: #818c95;*/
 
-    .bg-auth {
-        background: no-repeat url("../../public/images/bg-auth-light.jpg");
-        background-size: cover;
-    }
-
+    --bs-card-title-color: green;
 }
 
 [data-bs-theme="dark"] {
@@ -53,4 +50,25 @@
     /*--bs-spinner-animation-name: spinner-border;*/
     /*border: var(--bs-spinner-border-width) solid currentcolor;*/
     /*border-right-color: transparent;*/
+}
+
+.bg-auth {
+    background: no-repeat url("../../public/images/bg-auth-light.jpg");
+    background-size: cover;
+}
+
+main {
+    margin-top: 3.5rem;
+}
+
+.dash-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+}
+
+.app-text-footer {
+    color: #2a2c30 !important;
 }
