@@ -49,7 +49,7 @@
 {{--    </div>--}}
 
 <main class="border border-warning p-3">
-    {{ $slot }}
+    {{ $slot ?? 'Ops, ocorreu algum erro do nosso lado, entre em contato nosso suporte!' }}
 </main>
 
 <footer class="bg-black app-text-footer p-2 fixed-bottom d-flex justify-content-center">
@@ -57,9 +57,11 @@
 </footer>
 
 <script src="{{ mix('js/app.js') }}"></script>
+<script src="{{ mix('js/suppliers.js') }}"></script>
 <script src="{{ asset('js/theme.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     const tooltipList = [ ...tooltipTriggerList ].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
