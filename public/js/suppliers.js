@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",(function(){var e=document.getElementById("addSupplierModal");e.addEventListener("show.bs.modal",(function(t){e.setAttribute("data-bs-backdrop","static")})),e.querySelector(".btn-secondary").addEventListener("click",(function(){confirm("Tem certeza que deseja cancelar?")&&e.hide()}))}));
+//# sourceMappingURL=suppliers.js.map
