@@ -12,7 +12,9 @@
             <h2 class="card-title d-flex justify-content-center text-primary">Redefinição de Senha</h2>
         </div>
         <div class="mb-4 mt-4">
-            {{ __('Esqueceu sua senha? Não se preocupe. Informe o seu e-mail e enviaremos um link para criar uma nova senha.') }}
+            <p>
+                Informe o seu e-mail e enviaremos um link para criar uma nova senha.
+            </p>
         </div>
         <form
             method="POST"

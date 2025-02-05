@@ -73,3 +73,26 @@ main {
     color: #2a2c30 !important;
 }
 
+.sidebar {
+    width: 15rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bs-body-bg);
+    border-right: 1px solid var(--bs-secondary);
+    padding-top: 4rem; /* Altura da navbar para evitar sobreposição */
+}
+
+.main-content {
+    margin-left: 15rem;
+    padding: 2rem;
+}
+
+.navbar {
+    height: 4rem;
+}
+
+.form-check-input {
+    --bs-form-check-bg: #c4ceff;
+}

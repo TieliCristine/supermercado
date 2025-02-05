@@ -34,8 +34,6 @@
                         <label for="phone" class="form-label">Telefone</label>
                         <input type="text" class="form-control" id="phone" name="phone" value="{{ $supplier->phone }}">
                     </div>
-
-
                 </form>
             </div>
             <div class="card-footer d-flex justify-content-center gap-2">
