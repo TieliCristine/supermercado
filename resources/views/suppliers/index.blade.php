@@ -12,6 +12,9 @@
                 </button>
             </div>
         </form>
+        <button type="button" class="btn btn-outline-success mb-3" data-bs-toggle="modal" data-bs-target="#addSupplierModal">
+            <i class="bi bi-person-plus-fill"></i>
+        </button>
 
         <!-- Tabela de fornecedores -->
         <div class="rounded-4 p-2 border border-primary table-responsive mb-2">
@@ -21,13 +24,6 @@
                           table-sm">
                 <thead>
                 <tr>
-                    <th>
-                        <button type="button" class="btn btn-outline-success mb-3" data-bs-toggle="modal" data-bs-target="#addSupplierModal">
-                            <i class="bi bi-person-plus-fill"></i>
-                        </button>
-                    </th>
-                </tr>
-                <tr>
                     <th>Nome Fantasia</th>
                     <th>Razão Social</th>
                     <th>Representante de Vendas</th>
@@ -35,7 +31,6 @@
                     <th>E-mail</th>
                     <th>Telefone</th>
                     <th>Ações</th>
-
                 </tr>
                 </thead>
                 <tbody class="table-group-divider" style="border-top: 2px solid var(--bs-primary);">
@@ -67,7 +62,6 @@
                 </tbody>
             </table>
         </div>
-
 
         <!-- Paginação -->
         {{ $suppliers->links() }}

@@ -15,7 +15,8 @@ class SupplierController extends Controller
         if ($request->has('search')) {
             $search = $request->input('search');
             $query->where('name', 'like', "%{$search}%")
-                    ->orWhere('cnpj', 'like', "%{$search}%");
+                ->orWhere('cnpj', 'like', "%{$search}%")
+                ->orWhere('representative', 'like', "%{$search}%");
         }
 
         $suppliers = $query->paginate(10); // Paginação com 10 itens por página
